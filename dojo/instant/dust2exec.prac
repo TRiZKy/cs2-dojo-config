@@ -1,0 +1,99 @@
+// game commands for offline server
+exec "dojo\resource\serversettingsoffline.prac"
+
+echo
+echo
+echo To practice instant Dust2 lineups
+echo -with lineup write>>> i1
+echo -without help write>>> i2
+echo This will load the training mode to your instant keys
+echo
+echo
+echo
+
+//#########################################################################################################
+// Real Instant positions (HELP versions = setpos + setang)
+alias instantdust21 "setpos -332.000000 -754.000000 138.169220;setang -22.174145 92.744995 0.000000"
+alias instantdust21output "say_team Dust2 Instant #1"
+alias instantdust21video "echo "
+
+alias instantdust22 "setpos -367.059998 -808.070007 144.117477;setang -0.067496 90.349030 0.000000"
+alias instantdust22output "say_team Dust2 Instant #2"
+alias instantdust22video "echo "
+
+alias instantdust23 "setpos -428.000000 -843.000000 156.405869;setang -24.533749 89.478012 0.000000"
+alias instantdust23output "say_team Dust2 Instant #3"
+alias instantdust23video "echo "
+
+alias instantdust24 "setpos -493.000000 -808.000000 169.493378;setang -11.901333 87.735397 0.000000"
+alias instantdust24output "say_team Dust2 Instant #4"
+alias instantdust24video "echo "
+
+alias instantdust25 "setpos -1141.000000 -808.000000 180.029602;setang -25.550224 68.533012 0.000000"
+alias instantdust25output "say_team Dust2 Instant #5"
+alias instantdust25video "echo "
+
+alias instantdust26 "setpos -1181.000000 -754.000000 183.110413;setang -30.741135 67.552895 0.000000"
+alias instantdust26output "say_team Dust2 Instant #6"
+alias instantdust26video "echo "
+
+//#########################################################################################################
+// NO-HELP versions (NO setang, only setpos)
+alias instantdust2n1 "setpos -332.000000 -754.000000 138.169220"
+alias instantdust2n2 "setpos -367.059998 -808.070007 144.117477"
+alias instantdust2n3 "setpos -428.000000 -843.000000 156.405869"
+alias instantdust2n4 "setpos -493.000000 -808.000000 169.493378"
+alias instantdust2n5 "setpos -1141.000000 -808.000000 180.029602"
+alias instantdust2n6 "setpos -1181.000000 -754.000000 183.110413"
+
+// Set unused variable
+alias instantrepeat ""
+alias instanthelp ""
+
+//#########################################################################################################
+// Cycle through HELP lineups (WITH setang)
+alias instantdust2 .instantdust21
+alias .instantdust21 "instantdust21; alias instantdust2 .instantdust22; alias instantrepeat instantdust21; alias instanthelp instantrepeat; instantdust21output; instantdust21video"
+alias .instantdust22 "instantdust22; alias instantdust2 .instantdust23; alias instantrepeat instantdust22; alias instanthelp instantrepeat; instantdust22output; instantdust22video"
+alias .instantdust23 "instantdust23; alias instantdust2 .instantdust24; alias instantrepeat instantdust23; alias instanthelp instantrepeat; instantdust23output; instantdust23video"
+alias .instantdust24 "instantdust24; alias instantdust2 .instantdust25; alias instantrepeat instantdust24; alias instanthelp instantrepeat; instantdust24output; instantdust24video"
+alias .instantdust25 "instantdust25; alias instantdust2 .instantdust26; alias instantrepeat instantdust25; alias instanthelp instantrepeat; instantdust25output; instantdust25video"
+alias .instantdust26 "instantdust26; alias instantdust2 .instantdust21; alias instantrepeat instantdust26; alias instanthelp instantrepeat; instantdust26output; instantdust26video"
+
+//#########################################################################################################
+// Cycle through NO-HELP lineups (WITHOUT setang)
+// In this mode, instantkey3 reveals the help (setang) for the CURRENT lineup.
+alias instantdust2nohelp .instantdust2n1
+
+alias .instantdust2n1 "instantdust2n1; alias instantdust2nohelp .instantdust2n2; alias instantrepeat instantdust2n1; alias instanthelp instantdust2h1; instantdust21output; instantdust21video"
+alias instantdust2h1 "instantdust21output; instantdust21"
+
+alias .instantdust2n2 "instantdust2n2; alias instantdust2nohelp .instantdust2n3; alias instantrepeat instantdust2n2; alias instanthelp instantdust2h2; instantdust22output; instantdust22video"
+alias instantdust2h2 "instantdust22output; instantdust22"
+
+alias .instantdust2n3 "instantdust2n3; alias instantdust2nohelp .instantdust2n4; alias instantrepeat instantdust2n3; alias instanthelp instantdust2h3; instantdust23output; instantdust23video"
+alias instantdust2h3 "instantdust23output; instantdust23"
+
+alias .instantdust2n4 "instantdust2n4; alias instantdust2nohelp .instantdust2n5; alias instantrepeat instantdust2n4; alias instanthelp instantdust2h4; instantdust24output; instantdust24video"
+alias instantdust2h4 "instantdust24output; instantdust24"
+
+alias .instantdust2n5 "instantdust2n5; alias instantdust2nohelp .instantdust2n6; alias instantrepeat instantdust2n5; alias instanthelp instantdust2h5; instantdust25output; instantdust25video"
+alias instantdust2h5 "instantdust25output; instantdust25"
+
+alias .instantdust2n6 "instantdust2n6; alias instantdust2nohelp .instantdust2n1; alias instantrepeat instantdust2n6; alias instanthelp instantdust2h6; instantdust26output; instantdust26video"
+alias instantdust2h6 "instantdust26output; instantdust26"
+
+//#########################################################################################################
+//	Bind repeat/help/etc (same style as Mirage)
+alias instantkey2 instantrepeat
+alias instantkey3 instanthelp
+alias instantkey4 "ent_fire smokegrenade_projectile kill; stopsound"
+alias instantkey5 "sv_rethrow_last_grenade"
+
+//	Bind WITH HELP mode to instantkey1
+alias i1 instantwheelstart
+alias instantwheelstart "alias instantkey1 instantdust2; alias instanthelp instantrepeat; toggleconsole; say_team Practice mode loaded ... Press your instant key #1 to cycle through the lineups. Press your instant key #3 to train the same lineup again; slot8"
+
+//	Bind WITHOUT HELP mode to instantkey1
+alias i2 instantlovestart
+alias instantlovestart "alias instantkey1 instantdust2nohelp; toggleconsole; say_team Practice mode loaded ... Press your instant key #1 to cycle through the lineups. Press your instant key #2 to train the same lineup again. Press your instant key #3 to reveal the lineup; slot8"
