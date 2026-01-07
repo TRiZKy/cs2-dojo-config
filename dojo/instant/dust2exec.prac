@@ -14,37 +14,37 @@ echo
 //#########################################################################################################
 // Real Instant positions (HELP versions = setpos + setang)
 alias instantdust21 "setpos -332.000000 -754.000000 138.169220;setang -22.174145 92.744995 0.000000"
-alias instantdust21output "say_team Dust2 Instant #1"
+alias instantdust21output "say_team Dust2 Instant mid doors #1, jumpthrow"
 alias instantdust21video "echo "
 
 alias instantdust22 "setpos -367.059998 -808.070007 144.117477;setang -0.067496 90.349030 0.000000"
-alias instantdust22output "say_team Dust2 Instant #2"
+alias instantdust22output "say_team Dust2 Instant mid doors #2, jumpthrow"
 alias instantdust22video "echo "
 
 alias instantdust23 "setpos -428.000000 -843.000000 156.405869;setang -24.533749 89.478012 0.000000"
-alias instantdust23output "say_team Dust2 Instant #3"
+alias instantdust23output "say_team Dust2 Instant mid doors #3, jumpthrow"
 alias instantdust23video "echo "
 
 alias instantdust24 "setpos -493.000000 -808.000000 169.493378;setang -11.901333 87.735397 0.000000"
-alias instantdust24output "say_team Dust2 Instant #4"
+alias instantdust24output "say_team Dust2 Instant #4 mid doors, jumpthrow"
 alias instantdust24video "echo "
 
 alias instantdust25 "setpos -1141.000000 -808.000000 180.029602;setang -25.550224 68.533012 0.000000"
-alias instantdust25output "say_team Dust2 Instant #5"
+alias instantdust25output "say_team Dust2 Instant #5 xbox smoke, jumpthrow"
 alias instantdust25video "echo "
 
 alias instantdust26 "setpos -1181.000000 -754.000000 183.110413;setang -30.741135 67.552895 0.000000"
-alias instantdust26output "say_team Dust2 Instant #6"
+alias instantdust26output "say_team Dust2 Instant #6 xbox smoke, jumpthrow"
 alias instantdust26video "echo "
 
 //#########################################################################################################
 // NO-HELP versions (NO setang, only setpos)
-alias instantdust2n1 "setpos -332.000000 -754.000000 138.169220"
-alias instantdust2n2 "setpos -367.059998 -808.070007 144.117477"
-alias instantdust2n3 "setpos -428.000000 -843.000000 156.405869"
-alias instantdust2n4 "setpos -493.000000 -808.000000 169.493378"
-alias instantdust2n5 "setpos -1141.000000 -808.000000 180.029602"
-alias instantdust2n6 "setpos -1181.000000 -754.000000 183.110413"
+alias instantdust2train1 "setpos -332.000000 -754.000000 138.169220"
+alias instantdust2train2 "setpos -367.059998 -808.070007 144.117477"
+alias instantdust2train3 "setpos -428.000000 -843.000000 156.405869"
+alias instantdust2train4 "setpos -493.000000 -808.000000 169.493378"
+alias instantdust2train5 "setpos -1141.000000 -808.000000 180.029602"
+alias instantdust2train6 "setpos -1181.000000 -754.000000 183.110413"
 
 // Set unused variable
 alias instantrepeat ""
